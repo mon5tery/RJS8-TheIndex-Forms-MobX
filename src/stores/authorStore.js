@@ -18,6 +18,18 @@ class AuthorStore {
 
   errors = null;
 
+  postForm = async userData => {
+    try {
+      const res = await axios.post(
+        "https://the-index-api.herokuapp.com",
+        userData
+      );
+      const data = res.data;
+    } catch (err) {
+      console.error(err.response);
+    }
+  };
+
   fetchAuthors = async () => {
     try {
       const res = await instance.get("/api/authors/");

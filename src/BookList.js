@@ -4,6 +4,7 @@ import { observer } from "mobx-react";
 // Components
 import SearchBar from "./SearchBar";
 import BookTable from "./BookTable";
+import BookForm from "./forms/BookForm";
 
 // Stores
 import bookStore from "./stores/bookStore";
